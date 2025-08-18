@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 আমার বই সংগ্রহ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="text-center py-10 text-white">
+    <h1 class="text-4xl font-extrabold drop-shadow-lg">📚 আমার বই সংগ্রহ</h1>
+    <p class="mt-2 text-lg">শিক্ষার্থীদের জন্য প্রয়োজনীয় সব বই এক জায়গায়</p>
+
+    <!-- Search Box -->
+    <div class="mt-6">
+      <input type="text" id="searchBox" placeholder="🔍 বই খুঁজুন..."
+        class="px-6 py-3 w-80 rounded-full shadow-lg focus:outline-none text-gray-700">
+    </div>
+  </header>
+
+  <!-- Books Section -->
+  <main class="flex-grow px-6 pb-10">
+    <div id="bookList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+
+      <!-- Book Cards -->
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">০১. বাংলা</h2>
+        <a href="bangla.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">০২. ইংরেজি</h2>
+        <a href="english.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">০৩. প্রাথমিক গণিত</h2>
+        <a href="math.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">০৪. প্রাথমিক বিজ্ঞান</h2>
+        <a href="science.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">০৫. বাংলাদেশ ও বিশ্বপরিচয়</h2>
+        <a href="bd-world.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">০৬. সংগীত</h2>
+        <a href="music.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">০৭. শারীরিক শিক্ষা</h2>
+        <a href="physical.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">০৮. চারু ও কারুকলা</h2>
+        <a href="art.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">০৯. ইসলাম ও নৈতিক শিক্ষা</h2>
+        <a href="islam.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">১০. হিন্দুধর্ম ও নৈতিক শিক্ষা</h2>
+        <a href="hindu.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">১১. খ্রিষ্টধর্ম ও নৈতিক শিক্ষা</h2>
+        <a href="christian.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 shadow-xl text-center hover:scale-105 transition-transform">
+        <h2 class="text-xl font-bold text-white mb-4">১২. বৌদ্ধধর্ম ও নৈতিক শিক্ষা</h2>
+        <a href="buddhist.pdf" target="_blank"
+          class="inline-block px-5 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-full shadow hover:from-blue-500 hover:to-purple-600 transition">
+          📥 Download
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-white py-4 bg-black/30">
+    <p>© 2025 আমার বই সংগ্রহ | ডিজাইন করেছেন ❤️</p>
+  </footer>
+
+  <!-- Search Function -->
+  <script>
+    const searchBox = document.getElementById("searchBox");
+    const bookList = document.getElementById("bookList").children;
+
+    searchBox.addEventListener("keyup", function () {
+      let query = searchBox.value.toLowerCase();
+      for (let book of bookList) {
+        let title = book.querySelector("h2").textContent.toLowerCase();
+        book.style.display = title.includes(query) ? "block" : "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
