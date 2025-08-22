@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sci‑Fi Fingerprint Scanner</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+<style>
+body { background: radial-gradient(1000px 600px at 70% 10%, rgba(0,255,200,.04), transparent 60%), #05060a; }
+.grid-scan { background-image: linear-gradient(rgba(12,255,214,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(12,255,214,.08) 1px, transparent 1px); background-size: 24px 24px; }
+.neon { box-shadow: 0 0 20px rgba(12,255,214,.25), inset 0 0 12px rgba(12,255,214,.15); }
+.glow { text-shadow: 0 0 10px rgba(12,255,214,.8); }
+</style>
+</head>
+<body class="min-h-screen text-teal-100">
+<div id="root"></div>
+<script>
+const { useState, useEffect, useRef } = React;
+const { motion, AnimatePresence } = window['framer-motion'];
+
+
+const API = 'http://localhost:8000';
+
+
+function ProgressRing({ progress }) {
+const radius = 54, stroke = 10;
+const normalizedRadius = radius - stroke * 0.5;
+const circumference = normalizedRadius * 2 * Math.PI;
+const strokeDashoffset = circumference - progress * circumference;
+return (
+React.createElement('svg', { height: radius*2, width: radius*2 },
+React.createElement('circle', {
+stroke: 'rgba(12,255,214,.2)', fill: 'transparent', strokeWidth: stroke,
+r: normalizedRadius, cx: radius, cy: radius
+}),
+React.createElement('circle', {
+stroke: '#0CFFD6', fill: 'transparent', strokeWidth: stroke,
+strokeLinecap: 'round', strokeDasharray: circumference + ' ' + circumference,
+style: { strokeDashoffset, transition: 'stroke-dashoffset .2s linear' },
+r: normalizedRadius, cx: radius, cy: radius
+})
+)
+);
+}
+
+
+function Scanner() {
+const [file, setFile] = useState(null);
+const [scanning, setScanning] = useState(false);
+const [progress, setProgress] = useState(0);
+const [result, setResult] = useState(null);
+const [candidates, setCandidates] = useState([]);
+const [db, setDb] = useState([]);
+
+
+const uploadRef = useRef();
+
+
+async function fetchList(){
+const r = await fetch(API + '/list');
+fd.append('enroll_if_not_found', 
